@@ -3,6 +3,7 @@
     angular.module("myFirstApp", [])
 
     .controller("myFirstController", DIController); 
+    DIController.$inject = ['$scope', '$filter'];
     function DIController($scope, $filter){
         $scope.name = "";
         $scope.totalValue=0;
