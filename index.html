@@ -3,16 +3,17 @@
     <head>
         <meta charset="utf-8">
         <title>hello coursera</title>
-        <script src="app.js"></script>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>  
     </head>
-    <body>
+    <body ng-app="myFirstApp">
         <h1> hello coursera Stuents i am excited about the course</h1>
-        <div id="namecalculator">
+        <div id="namecalculator" ng-controller="myFirstController">
             <div>
-                your Name: <input type="text" id=""name"/>
+                your Name: <input type="text" id="name" ng-model="name" ng-keyup="displayNumeric();" ng-blur="upper();">
+                your current name is :{{name}}
             </div>
-            <div id="output"></div>
+            <div id="output">total numeric value of person name is:{{totalValue}}</div>
         </div>
-        
     </body>
 </html>
